@@ -9,7 +9,6 @@ form.addEventListener("submit", function (e) {
     const phoneText = document.getElementById("form_phone").value.trim();
     const purposeText = document.getElementById("form_purpose").value.trim();
 
-    // Validación JavaScript (además de la validación HTML5)
     if (!nameText || !messageText || !fromMail) {
         alert("Por favor, complete todos los campos obligatorios.");
         return;
@@ -21,18 +20,22 @@ form.addEventListener("submit", function (e) {
         return;
     }
 
-    const mail = "heberduarteryr@gmail.com";
-    const purpose = encodeURIComponent("Mensaje de " + purposeText);
-    const message = encodeURIComponent(messageText);
-    const name = encodeURIComponent("Hola, mi nombre es: " + nameText);
-    const from_email = encodeURIComponent("Mi correo es: " + fromMail);
-    const phone = encodeURIComponent("Mi numero de telefono es: " + phoneText);
 
-    const mailto = `mailTo:${mail}?subject=${purpose}&body=${name}\n${phone}\n${from_email}\n\n${message}`;
+    const mail = "heberduarteryr@gmail.com";
+    const purpose = encodeURIComponent(purposeText);
+    const body = encodeURIComponent(`Hola, mi nombre es: ${nameText}\nMi numero de telefono es: ${phoneText}\nMi correo es: ${fromMail}\n\n${messageText}`);
+
+    console.log("HBR",{mail,
+        purpose,
+        body})
+
+    const mailto = `mailTo:${mail}?subject=${purpose}&body=${body}`;
     const a = document.createElement('a');
     document.body.appendChild(a);
-    a.setAttribute('href', mailto);
+    a.setAttribute('href', `mailto:${mail}?subject=${purpose}&body=${body}`);
+    a.setAttribute('target', '_blank');
     a.click();
+    a.remove()
 });
 
 //   Controla la altura del textarea
