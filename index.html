@@ -31,7 +31,7 @@
       <a href="#skills" class="a_nav">
         <img class="img_nav" src="./img/proyectos.svg" /> Proyectos</a
       >
-      <a routerLink="contacto" class="a_nav">
+      <a href="#form" class="a_nav">
         <img class="img_nav" src="./img/contacto.svg" />Contacto</a
       >
     </nav>
@@ -238,18 +238,54 @@
           </button>
         </form>
       </section>
- 
-      ○ Películas Favoritas
-      (identifi cada con "películas"): Debe presentar las tres mejores películas
-      de la historia según tu criterio.
-       ■ Cada película debe incluir su título,
-      una imagen y una breve descripción o comentario. Sección de Pie de Página
+
+      <section class="movies_section section">
+
+        <!-- div target se usa como contenedor para darle estilos y forma a la tarjeta -->
+        <div class="movies_target"> 
+          <picture class="movies_picture">
+            <img class="movies_illustration" src="https://www.originalfilmart.com/cdn/shop/products/interstellar_2014_advance_original_film_art_682852f2-23f6-46de-a1db-4029d5b6f0b4_5000x.jpg?v=1574284010" alt="Banner pelicula interstellar ">
+          </picture>
+          <div class="movie_description_container">
+            <p class="subtitle">Interstellar</p>
+            <p class="target_text movie_text">
+              Es una pelicula que muestra las necesidades que requiere un hito en el mundo de la ciencia, sacrificio y sobre todo la razón.
+              El entender la situacion en la toma de desiciones marca todo el camino de los personajes, siempre hacia un fin común y el de la supervivencia de la raza humana impulsados por la fuerza mas potente que une a los individuos y el que le da proposito a todos los actos: el amor.
+              Desde lo más instintivo hasta la razon más obvia, casi todos los aspectos se basan en realidades cientificas. Mostrandonos lo espectacular que es el universo real que existe en nuestro plano.
+            </p>
+          </div>
+        </div>
+
+        <div class="movies_target"> 
+          <picture class="movies_picture">
+            <img class="movies_illustration" src="https://docentesenelcine.wordpress.com/wp-content/uploads/2017/07/imagen1.jpg" alt="Banner pelicula La ola">
+          </picture>
+          <div class="movie_description_container">
+            <p class="subtitle">La ola</p>
+            <p class="target_text movie_text">
+              Esta pelicula basada en hechos reales, nos muestra un experimento social que se sale de las manos. ¿Hasta donde somos capaces de llegar como sociedad? sin demaciada gloria, nos muestra la manera en que las personas nos dejamos llevar por nuestro entorno y los instintos de pertenencia nos pueda convertir en complices de los crimenes más penosos de la historia. La necesidad de critica social, hace que estas producciones sean tan valiosas para mi.
+            </p>
+          </div>
+        </div>
+        
+        <div class="movies_target"> 
+          <picture class="movies_picture">
+            <img class="movies_illustration" src="https://m.media-amazon.com/images/S/pv-target-images/8d06141d669174a01178764c03a81e804766ef7b6d1bc028c96caa06b1cbdc42.jpg" alt="Banner pelicula eterno resplandor de una mente sin recuerdos">
+          </picture>
+          <div class="movie_description_container">
+            <p class="subtitle">Eterno resplandor de una mente sin recuerdos</p>
+            <p class="target_text movie_text">
+              Cuando dos personas que se amaron tanto, deciden borrar sus recuerdos para podes seguir viviendo sus vidas. Pierden las enseñanzas que el dolor les ah dejado, dejandolos abiertos a repetir de nuevo los mismos patrones. Esta pelicula es de mis favoritas porque nos brinda la nocion de vivir a pesar de los errores y además, saber las cosas que ya no queremos volver a pasar.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
       <div class="logos">
         <figure class="logo_container">
-          <a class="link" href="{{linkedin}}" target="_blank"
+          <a class="link" href="https://www.linkedin.com/in/heber739/" target="_blank"
             ><img
               src="./img/linkedin.svg"
               class="logo box"
@@ -257,9 +293,8 @@
             />Linkedin</a
           >
         </figure>
-
         <img src="./img/Logo.svg" alt="Logo personal" class="logo box" />
-        <a class="link" href="{{github}}" target="_blank"
+        <a class="link" href="https://github.com/Heber-739" target="_blank"
           ><img src="./img/github.svg" class="logo box" alt=" Logo de github" />GitHub</a
         >
       </div>
